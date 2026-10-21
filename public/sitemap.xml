@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://example.com/</loc></url>
+  <url><loc>https://example.com/length/</loc></url>
+  <url><loc>https://example.com/weight/</loc></url>
+  <url><loc>https://example.com/temperature/</loc></url>
+  <url><loc>https://example.com/volume/</loc></url>
+  <url><loc>https://example.com/area/</loc></url>
+  <url><loc>https://example.com/speed/</loc></url>
+  <url><loc>https://example.com/time/</loc></url>
+  <url><loc>https://example.com/data/</loc></url>
+  <url><loc>https://example.com/pressure/</loc></url>
+  <url><loc>https://example.com/energy/</loc></url>
+  <url><loc>https://example.com/about.html</loc></url>
+  <url><loc>https://example.com/contact.html</loc></url>
+  <url><loc>https://example.com/privacy.html</loc></url>
+</urlset>

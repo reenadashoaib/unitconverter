@@ -7,7 +7,6 @@
     "not_found_handling": "404-page"
   },
   "routes": [
-    { "pattern": "allunitconvert.online", "custom_domain": true },
-    { "pattern": "www.allunitconvert.online", "custom_domain": true }
+    { "pattern": "allunitconvert.online", "custom_domain": true }
   ]
 }

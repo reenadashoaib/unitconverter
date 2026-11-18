@@ -44,4 +44,4 @@ The HTML pages, `public/assets/js/units.js` and `public/sitemap.xml` are generat
 
 **Cloudflare Pages (Git):** connect this repository, leave the build command empty, and set the build output directory to `public`.
 
-**Cloudflare Workers (CLI):** `npx wrangler deploy` uses `wrangler.jsonc`, which serves `public/` as static assets on https://allunitconvert.online and https://www.allunitconvert.online.
+**Cloudflare Workers (CLI):** `npx wrangler deploy` uses `wrangler.jsonc`, which serves `public/` as static assets on https://allunitconvert.online.

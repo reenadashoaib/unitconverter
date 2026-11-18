@@ -29,7 +29,8 @@
 
   // ---------------------------------------------------------------- AdSense
 
-  if (C.adsenseClient) {
+  // The pages load the AdSense script in <head>; add it only if a page lacks it.
+  if (C.adsenseClient && !document.querySelector('script[src*="adsbygoogle.js"]')) {
     var s = document.createElement("script");
     s.async = true;
     s.crossOrigin = "anonymous";

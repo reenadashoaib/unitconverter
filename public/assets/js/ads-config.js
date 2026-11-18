@@ -3,7 +3,7 @@ window.AD_CONFIG = {
   // Your AdSense publisher ID, e.g. "ca-pub-1234567890123456". Leave empty until AdSense approves the site.
   // Once set, the AdSense script loads on every page, so Auto ads (including full-screen
   // "vignette" ads and "anchor" ads) can also be switched on from the AdSense dashboard.
-  adsenseClient: "",
+  adsenseClient: "ca-pub-8884353000483064",
 
   // AdSense ad unit IDs (the data-ad-slot number from AdSense > Ads > By ad unit).
   // Create one display ad unit per placement and paste its ID here.
@@ -21,7 +21,7 @@ window.AD_CONFIG = {
 
   // Show grey boxes where ads will go, so you can see the layout.
   // Set to false before going live: unfilled slots then collapse instead of leaving gaps.
-  showPlaceholders: true,
+  showPlaceholders: false,
 
   // Floating video ad, bottom right. AdSense does not serve ads into custom floating
   // players, so use a direct-sold video or a video ad network's tag here.

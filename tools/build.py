@@ -21,6 +21,8 @@ SITE = {
     # Your live address, no trailing slash. Used for canonical links and sitemap.xml.
     "url": "https://allunitconvert.online",
     "email": "contact@example.com",
+    # AdSense publisher ID. Also set adsenseClient in public/assets/js/ads-config.js.
+    "adsense": "ca-pub-8884353000483064",
 }
 
 # Each unit: (id, singular, plural, symbol, factor to the category's base unit).
@@ -434,6 +436,8 @@ def page(*, path, title, description, body, active=None):
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&display=swap">
 <link rel="stylesheet" href="{prefix}assets/css/style.css">
+<meta name="google-adsense-account" content="{SITE["adsense"]}">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={SITE["adsense"]}" crossorigin="anonymous"></script>
 <script src="{prefix}assets/js/ads-config.js"></script>
 <script src="{prefix}assets/js/ads.js" defer></script>
 </head>

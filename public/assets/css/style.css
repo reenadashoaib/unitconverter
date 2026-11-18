@@ -497,6 +497,21 @@ main > * + * { margin-top: var(--s7); }
 .ad-band-inline { padding: 0; }
 .ad-band:has(.ad.is-empty) { display: none; }
 
+/* Live mode (showPlaceholders: false): a slot without an ad takes no space from the
+   first paint. It keeps its width so AdSense can size an ad into it once it has a unit ID. */
+.ads-live .ad:not(.is-filled) {
+  min-height: 0;
+  height: 0;
+  border: 0;
+  background: none;
+}
+.ads-live .ad:not(.is-filled) > * { display: none; }
+.ads-live .ad-band:not(:has(.is-filled)) { padding: 0; }
+.ads-live main > .ad-tiles:not(:has(.is-filled)),
+.ads-live main > .ad-band-inline:not(:has(.is-filled)) { margin-top: 0; gap: 0; }
+/* AdSense had no ad to show for this slot: hide it, label included. */
+.ad:has(ins[data-ad-status="unfilled"]) { display: none; }
+
 .ad-tiles {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));

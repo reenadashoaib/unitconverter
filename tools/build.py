@@ -20,7 +20,7 @@ SITE = {
     "name": "Unit Converter",
     # Your live address, no trailing slash. Used for canonical links and sitemap.xml.
     "url": "https://allunitconvert.online",
-    "email": "contact@example.com",
+    "email": "asad@pldash.com",
     # AdSense publisher ID. Also set adsenseClient in public/assets/js/ads-config.js.
     "adsense": "ca-pub-8884353000483064",
 }
@@ -439,6 +439,7 @@ def page(*, path, title, description, body, active=None):
 <meta name="google-adsense-account" content="{SITE["adsense"]}">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={SITE["adsense"]}" crossorigin="anonymous"></script>
 <script src="{prefix}assets/js/ads-config.js"></script>
+<script>if (window.AD_CONFIG && AD_CONFIG.showPlaceholders === false) document.documentElement.classList.add("ads-live");</script>
 <script src="{prefix}assets/js/ads.js" defer></script>
 </head>
 <body>

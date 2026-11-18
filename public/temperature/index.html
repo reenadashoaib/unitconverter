@@ -19,7 +19,13 @@
 <meta name="google-adsense-account" content="ca-pub-8884353000483064">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8884353000483064" crossorigin="anonymous"></script>
 <script src="../assets/js/ads-config.js"></script>
-<script>if (window.AD_CONFIG && AD_CONFIG.showPlaceholders === false) document.documentElement.classList.add("ads-live");</script>
+<script>(function (c, h) {
+  if (!c) return;
+  var live = c.showPlaceholders === false, s = c.slots || {};
+  if (live) h.classList.add("ads-live");
+  if (!live || (c.adsenseClient && s["rail-left"])) h.classList.add("has-rail-left");
+  if (!live || (c.adsenseClient && s["rail-right"])) h.classList.add("has-rail-right");
+})(window.AD_CONFIG, document.documentElement);</script>
 <script src="../assets/js/ads.js" defer></script>
 </head>
 <body>

@@ -439,7 +439,13 @@ def page(*, path, title, description, body, active=None):
 <meta name="google-adsense-account" content="{SITE["adsense"]}">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={SITE["adsense"]}" crossorigin="anonymous"></script>
 <script src="{prefix}assets/js/ads-config.js"></script>
-<script>if (window.AD_CONFIG && AD_CONFIG.showPlaceholders === false) document.documentElement.classList.add("ads-live");</script>
+<script>(function (c, h) {{
+  if (!c) return;
+  var live = c.showPlaceholders === false, s = c.slots || {{}};
+  if (live) h.classList.add("ads-live");
+  if (!live || (c.adsenseClient && s["rail-left"])) h.classList.add("has-rail-left");
+  if (!live || (c.adsenseClient && s["rail-right"])) h.classList.add("has-rail-right");
+}})(window.AD_CONFIG, document.documentElement);</script>
 <script src="{prefix}assets/js/ads.js" defer></script>
 </head>
 <body>
@@ -651,6 +657,10 @@ or opt out of some third-party vendors' use of cookies for personalized advertis
 <a href="https://www.aboutads.info/choices/" rel="noopener">www.aboutads.info</a>.</p>
 <p>See <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">how Google uses
 information from sites that use its services</a>.</p>
+<h2>Your choices</h2>
+<p>Visitors in the UK, the European Economic Area and Switzerland are asked for consent before
+cookies are used for personalized advertising, through a consent message provided by Google.
+You can change your choice at any time from the privacy settings link shown with that message.</p>
 <h2>Browser storage</h2>
 <p>The site stores a small counter in your browser's session storage so that full-screen ads are
 shown at most once per visit. It is deleted when you close the tab.</p>

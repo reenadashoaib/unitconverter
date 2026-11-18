@@ -170,17 +170,21 @@ a:hover { text-decoration-thickness: 2px; }
 
 .rail { display: none; }
 
-main { min-width: 0; padding-bottom: var(--s7); }
+/* Capped so the page stays centred and readable when no vertical banners are shown. */
+main { min-width: 0; width: 100%; max-width: 1088px; justify-self: center; padding-bottom: var(--s7); }
 main > * + * { margin-top: var(--s7); }
 
+/* A rail only takes a column when it has an ad to show: the head script adds
+   has-rail-left / has-rail-right to <html> for rails with an ad unit ID (or placeholders on). */
 @media (min-width: 1100px) {
-  .layout { grid-template-columns: minmax(0, 1fr) 300px; }
-  .rail-right { display: block; }
+  .has-rail-right .layout { grid-template-columns: minmax(0, 1fr) 300px; }
+  .has-rail-right .rail-right { display: block; }
   .rail-right .ad { position: sticky; top: var(--s4); }
 }
 @media (min-width: 1400px) {
-  .layout { grid-template-columns: 160px minmax(0, 1fr) 300px; }
-  .rail-left { display: block; }
+  .has-rail-left .layout { grid-template-columns: 160px minmax(0, 1fr); }
+  .has-rail-left.has-rail-right .layout { grid-template-columns: 160px minmax(0, 1fr) 300px; }
+  .has-rail-left .rail-left { display: block; }
   .rail-left .ad { position: sticky; top: var(--s4); }
 }
 

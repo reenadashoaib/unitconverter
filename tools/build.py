@@ -19,7 +19,7 @@ PUBLIC = ROOT / "public"
 SITE = {
     "name": "Unit Converter",
     # Your live address, no trailing slash. Used for canonical links and sitemap.xml.
-    "url": "https://example.com",
+    "url": "https://allunitconvert.online",
     "email": "contact@example.com",
 }
 

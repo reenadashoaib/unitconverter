@@ -14,9 +14,8 @@ Then open http://localhost:8000.
 
 ## Before going live
 
-1. In `tools/build.py`, set `SITE["url"]` to your domain and `SITE["email"]` to your contact address, then run `python3 tools/build.py` to regenerate the pages.
-2. Replace `example.com` in `public/robots.txt` with your domain.
-3. After AdSense approves the site, put the line AdSense gives you into `public/ads.txt`.
+1. In `tools/build.py`, set `SITE["email"]` to your contact address, then run `python3 tools/build.py` to regenerate the pages.
+2. After AdSense approves the site, put the line AdSense gives you into `public/ads.txt`.
 
 ## Ads
 
@@ -45,4 +44,4 @@ The HTML pages, `public/assets/js/units.js` and `public/sitemap.xml` are generat
 
 **Cloudflare Pages (Git):** connect this repository, leave the build command empty, and set the build output directory to `public`.
 
-**Cloudflare Workers (CLI):** `npx wrangler deploy` uses `wrangler.jsonc`, which serves `public/` as static assets.
+**Cloudflare Workers (CLI):** `npx wrangler deploy` uses `wrangler.jsonc`, which serves `public/` as static assets on https://allunitconvert.online and https://www.allunitconvert.online.
